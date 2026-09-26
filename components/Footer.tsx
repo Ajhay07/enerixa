@@ -1,104 +1,140 @@
 import { COMPANY } from "@/lib/data";
 import Link from "next/link";
-import { Phone, Mail, Globe, MapPin } from "lucide-react";
+import Logo from "@/components/Logo";
+import { Phone, Mail, Globe, Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-navy/10 bg-navy-deep text-slate-300">
-      <div className="container-x py-12 md:py-16">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
-          <div className="space-y-4">
-            <div className="flex items-center gap-2.5">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M8 32V14l10-6v18-6 6-10 4z" fill="#003B8F" />
-                <path d="M18 8v18l12-6V8l-6-4-6 4z" fill="#65A30D" />
-              </svg>
-              <span className="text-xl font-extrabold text-white">
-                Enerixa
-              </span>
-            </div>
-            <p className="text-sm max-w-xs">
-              {COMPANY.name} — intelligent solar, home automation and security
-              solutions powering a sustainable future.
+    <footer className="bg-white border-t border-slate-200">
+      <div className="container-x py-14 lg:py-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12">
+          {/* Brand Col */}
+          <div className="lg:col-span-4 space-y-4">
+            <Logo />
+            <p className="text-xs font-semibold text-slate-700 tracking-wide pt-2">
+              Smart Energy | Smart Automation | Smart Security
             </p>
-            <p className="text-xs">© {new Date().getFullYear()} Enerxia Energy Pvt. Ltd.</p>
+            <p className="text-xs text-slate-500">
+              One Partner. Complete Solutions.
+            </p>
+            <p className="text-xs text-slate-500 max-w-sm leading-relaxed">
+              Complete rooftop solar plants, cutting-edge smart home automation,
+              and enterprise-grade CCTV security systems for homes, businesses and
+              industries.
+            </p>
           </div>
 
-          <FooterLinks
-            title="Solutions"
-            links={["Rooftop Solar", "Smart Home Automation", "Security & CCTV"]}
-          />
-          <FooterLinks
-            title="Pages"
-            links={["About", "Projects", "Contact"]}
-          />
-
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-slate-100">
-              Contact
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2.5">
-                <Phone className="mt-0.5 size-4 text-green-brand" />{" "}
-                <span>{COMPANY.phone}</span>
+          {/* Quick Links */}
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="text-sm font-bold text-slate-900">Quick Links</h4>
+            <ul className="space-y-2 text-xs text-slate-600">
+              <li>
+                <Link href="/" className="hover:text-[#003B73]">
+                  Home
+                </Link>
               </li>
-              <li className="flex items-start gap-2.5">
-                <Mail className="mt-0.5 size-4 text-green-brand" />{" "}
-                <span>{COMPANY.email}</span>
+              <li>
+                <Link href="/#about" className="hover:text-[#003B73]">
+                  About Us
+                </Link>
               </li>
-              <li className="flex items-start gap-2.5">
-                <Globe className="mt-0.5 size-4 text-green-brand" />{" "}
-                <span>{COMPANY.website}</span>
+              <li>
+                <Link href="/services" className="hover:text-[#003B73]">
+                  Solutions
+                </Link>
               </li>
-              <li className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 size-4 text-green-brand" />{" "}
-                <span>Chennai, India</span>
+              <li>
+                <Link href="/#why-us" className="hover:text-[#003B73]">
+                  Why Choose Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/#process" className="hover:text-[#003B73]">
+                  Our Process
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-[#003B73]">
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
-        </div>
 
-        <div className="mt-10 border-t border-navy/10 pt-6 flex flex-col sm:justify-between sm:flex-row gap-4 text-xs text-slate-500">
-          <span>All rights reserved. | CIN: UXXXXXX</span>
-          <span>Registered Office: Chennai, Tamil Nadu</span>
+          {/* Our Solutions */}
+          <div className="lg:col-span-3 space-y-3">
+            <h4 className="text-sm font-bold text-slate-900">Our Solutions</h4>
+            <ul className="space-y-2 text-xs text-slate-600">
+              <li>
+                <Link href="/services#solar" className="hover:text-[#003B73]">
+                  Rooftop Solar Solutions
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#automation" className="hover:text-[#003B73]">
+                  Home Automation Solutions
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#security" className="hover:text-[#003B73]">
+                  Security Solutions
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Get in Touch */}
+          <div className="lg:col-span-3 space-y-3">
+            <h4 className="text-sm font-bold text-slate-900">Get in Touch</h4>
+            <ul className="space-y-2.5 text-xs text-slate-600">
+              <li>
+                <a href={COMPANY.phoneHref} className="flex items-center gap-2 hover:text-[#003B73]">
+                  <Phone size={13} className="text-[#003B73]" />
+                  <span>{COMPANY.phone}</span>
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-2 hover:text-[#003B73]">
+                  <Mail size={13} className="text-[#003B73]" />
+                  <span>{COMPANY.email}</span>
+                </a>
+              </li>
+              <li>
+                <a href={`https://${COMPANY.website}`} className="flex items-center gap-2 hover:text-[#003B73]">
+                  <Globe size={13} className="text-[#003B73]" />
+                  <span>{COMPANY.website}</span>
+                </a>
+              </li>
+            </ul>
+            <div className="flex items-center gap-2 pt-2">
+              <a href="#" aria-label="Facebook" className="p-2 rounded-full bg-[#003B73] text-white hover:bg-[#5FAF35]">
+                <Facebook size={13} />
+              </a>
+              <a href="#" aria-label="LinkedIn" className="p-2 rounded-full bg-[#003B73] text-white hover:bg-[#5FAF35]">
+                <Linkedin size={13} />
+              </a>
+              <a href="#" aria-label="Instagram" className="p-2 rounded-full bg-[#003B73] text-white hover:bg-[#5FAF35]">
+                <Instagram size={13} />
+              </a>
+              <a href="#" aria-label="YouTube" className="p-2 rounded-full bg-[#003B73] text-white hover:bg-[#5FAF35]">
+                <Youtube size={13} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-[#003B73] text-slate-300 py-3 text-xs">
+        <div className="container-x flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p>© {new Date().getFullYear()} Enerixa. All rights reserved.</p>
+          <div className="flex items-center gap-4 text-slate-300">
+            <Link href="/contact" className="hover:text-white">Privacy Policy</Link>
+            <span>|</span>
+            <Link href="/contact" className="hover:text-white">Terms & Conditions</Link>
+          </div>
         </div>
       </div>
     </footer>
   );
 }
 
-function FooterLinks({
-  title,
-  links,
-}: {
-  title: string;
-  links: string[];
-}) {
-  return (
-    <div className="space-y-4">
-      <h4 className="text-sm font-semibold text-slate-100">{title}</h4>
-      <ul className="space-y-2.5 text-sm">
-        {links.map((l) => (
-          <li key={l}>
-            <Link
-              href={
-                l === "Home"
-                  ? "/"
-                  : "/" + l.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")
-              }
-              className="hover:text-white transition-colors"
-            >
-              {l}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}

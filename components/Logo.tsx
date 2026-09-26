@@ -1,22 +1,39 @@
 import Link from "next/link";
 
-export default function Logo() {
+export default function Logo({ light = false }: { light?: boolean }) {
   return (
-    <Link href="/" className="flex items-center">
-      <svg
-        width="36"
-        height="36"
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="mr-2"
-      >
-        <path d="M8 32V14l10-6v18-6 6-10 4z" fill="#003B8F" />
-        <path d="M18 8v18l12-6V8l-6-4-6 4z" fill="#65A30D" />
-      </svg>
-      <span className="text-2xl font-extrabold tracking-tight text-navy">
-        Enerixa
-      </span>
+    <Link href="/" className="inline-flex items-center gap-2 group py-1">
+      <div className="flex flex-col">
+        <div className="flex items-center tracking-tight">
+          <span
+            className={`text-2xl sm:text-3xl font-black tracking-wider ${
+              light ? "text-white" : "text-[#003B73]"
+            }`}
+          >
+            ENERI
+          </span>
+          <span className="relative inline-flex items-center justify-center font-black text-2xl sm:text-3xl">
+            <span className={light ? "text-white" : "text-[#003B73]"}>X</span>
+            <span className="absolute -top-1.5 -right-1 text-sm text-[#5FAF35] font-extrabold select-none">
+              ✦
+            </span>
+          </span>
+          <span
+            className={`text-2xl sm:text-3xl font-black tracking-wider ${
+              light ? "text-white" : "text-[#003B73]"
+            }`}
+          >
+            A
+          </span>
+        </div>
+        <div className="flex items-center justify-between -mt-0.5 tracking-[0.3em] text-[10px] sm:text-[11px] font-bold text-[#5FAF35] uppercase">
+          <span className="h-[1.5px] w-3 bg-[#5FAF35] inline-block"></span>
+          <span>ENERGY SOLUTIONS</span>
+          <span className="h-[1.5px] w-3 bg-[#5FAF35] inline-block"></span>
+        </div>
+      </div>
     </Link>
   );
 }
+
+

@@ -1,5 +1,5 @@
 export const COMPANY = {
-  name: "Enerixa",
+  name: "Enerixa Energy Solutions",
   tagline: "Powering a Sustainable Future",
   phone: "+91 97102 94225",
   phoneHref: "tel:+919710294225",
@@ -10,11 +10,16 @@ export const COMPANY = {
 };
 
 export const IMG = {
-  hero: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2000&q=80",
-  about: "https://images.unsplash.com/photo-1584276433295-4b49a252e5b8?auto=format&fit=crop&w=1400&q=80",
-  solar: "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=1600&q=80",
-  automation: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1600&q=80",
-  security: "https://images.unsplash.com/photo-1558002038-c5f7fba0d8b6?auto=format&fit=crop&w=1600&q=80",
+  hero: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80",
+  heroHouse: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+  heroModernSolarVilla: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
+  aboutSolarField: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80",
+  about: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80",
+  solar: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1200&q=80",
+  automation: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=80",
+  security: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80",
+  whyChooseBg: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80",
+  benefitSolar: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80",
 };
 
 export const PROJECTS = [
@@ -64,8 +69,10 @@ export const PROJECTS = [
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Solutions" },
-  { href: "/projects", label: "Projects" },
+  { href: "/#about", label: "About" },
+  { href: "/#solutions", label: "Solutions", hasDropdown: true },
+  { href: "/#why-us", label: "Why Us" },
+  { href: "/#process", label: "Process" },
   { href: "/contact", label: "Contact" },
 ];
+
