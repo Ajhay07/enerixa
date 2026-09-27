@@ -61,7 +61,7 @@ export function SolutionsSection() {
 
 
   return (
-    <section id="solutions" className="py-28 sm:py-36 lg:py-40 bg-[#F4F7FA]/80">
+    <section id="solutions" className="py-20 sm:py-24 lg:py-28 bg-[#F4F7FA]/80">
       <div className="container-x">
         <SectionHeading
           center
@@ -70,15 +70,15 @@ export function SolutionsSection() {
           subtitle="From clean solar energy generation to intelligent living automation and fortress-grade security, we deliver end-to-end turnkey engineering."
         />
 
-        <div className="mt-16 sm:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-10 xl:gap-12">
+        <div className="mt-12 sm:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8 xl:gap-10">
           {solutions.map((item, idx) => (
             <Reveal
               key={item.title}
-              delay={idx * 0.15}
-              className="group flex flex-col rounded-[2.5rem] bg-white shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_-15px_rgba(0,59,115,0.2)] border border-slate-200/80 overflow-hidden transition-all duration-500 hover:-translate-y-2.5"
+              delay={idx * 0.12}
+              className="group flex flex-col rounded-[2rem] bg-white shadow-[0_10px_30px_-10px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_45px_-10px_rgba(0,59,115,0.18)] border border-slate-200/80 overflow-hidden transition-all duration-500 hover:-translate-y-2"
             >
-              {/* Massive Image Header occupying ~45-50% */}
-              <div className="relative h-72 sm:h-80 w-full overflow-hidden bg-slate-900">
+              {/* Image Header occupying 45% */}
+              <div className="relative h-60 sm:h-64 w-full overflow-hidden bg-slate-900">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -90,34 +90,34 @@ export function SolutionsSection() {
                 
                 {/* Floating Badge Icon */}
                 <div
-                  className={`absolute -bottom-7 left-8 flex h-16 w-16 items-center justify-center rounded-2xl ${item.badgeBg} text-white shadow-2xl border-4 border-white transition-transform group-hover:scale-110 duration-300`}
+                  className={`absolute -bottom-6 left-7 flex h-13 w-13 p-2.5 items-center justify-center rounded-xl ${item.badgeBg} text-white shadow-xl border-3 border-white transition-transform group-hover:scale-110 duration-300`}
                 >
-                  <item.badgeIcon size={28} className="stroke-[2.5]" />
+                  <item.badgeIcon size={24} className="stroke-[2.5]" />
                 </div>
 
-                <span className="absolute top-5 right-5 text-sm font-black text-white bg-black/50 backdrop-blur-md rounded-full px-4 py-1.5 border border-white/20">
+                <span className="absolute top-4 right-4 text-xs font-black text-white bg-black/50 backdrop-blur-md rounded-full px-3 py-1 border border-white/20">
                   {item.num}
                 </span>
               </div>
 
-              {/* Card Body */}
-              <div className="p-8 sm:p-10 pt-12 sm:pt-14 flex-1 flex flex-col justify-between">
+              {/* Card Body with tighter internal padding */}
+              <div className="p-6 sm:p-8 pt-10 sm:pt-11 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-2xl sm:text-[26px] font-black text-slate-900 tracking-tight group-hover:text-[#003B73] transition-colors leading-snug">
+                  <h3 className="text-xl sm:text-[22px] font-black text-slate-900 tracking-tight group-hover:text-[#003B73] transition-colors leading-snug">
                     {item.title}
                   </h3>
-                  <p className="mt-3.5 text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+                  <p className="mt-2.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
                     {item.desc}
                   </p>
 
-                  <div className="mt-8 pt-6 border-t border-slate-100">
-                    <div className="text-xs font-black uppercase tracking-wider text-[#003B73] mb-4">
+                  <div className="mt-6 pt-5 border-t border-slate-100">
+                    <div className="text-[11px] font-black uppercase tracking-wider text-[#003B73] mb-3">
                       Key Highlights:
                     </div>
-                    <ul className="space-y-3.5">
+                    <ul className="space-y-2.5">
                       {item.features.map((f) => (
-                        <li key={f} className="flex items-center gap-3 text-sm sm:text-base font-semibold text-slate-700">
-                          <CheckCircle2 size={19} className="shrink-0 text-[#5FAF35] stroke-[2.5]" />
+                        <li key={f} className="flex items-center gap-2.5 text-sm font-semibold text-slate-700">
+                          <CheckCircle2 size={17} className="shrink-0 text-[#5FAF35] stroke-[2.5]" />
                           <span>{f}</span>
                         </li>
                       ))}
@@ -125,13 +125,13 @@ export function SolutionsSection() {
                   </div>
                 </div>
 
-                <div className="mt-10 pt-6 border-t border-slate-100 flex items-center justify-between">
+                <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between">
                   <Link
                     href={item.href}
-                    className="inline-flex items-center gap-2 text-base font-bold text-[#003B73] group-hover:text-[#5FAF35] transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-[#003B73] group-hover:text-[#5FAF35] transition-colors"
                   >
                     <span>View System Details</span>
-                    <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1.5" />
+                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </div>
               </div>
@@ -142,4 +142,5 @@ export function SolutionsSection() {
     </section>
   );
 }
+
 

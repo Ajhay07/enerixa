@@ -27,15 +27,15 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md py-4"
-          : "bg-white/90 backdrop-blur-sm py-5 lg:py-6"
+          ? "bg-white/95 backdrop-blur-md shadow-md py-2.5"
+          : "bg-white/90 backdrop-blur-sm py-3 lg:py-3.5"
       }`}
     >
       <div className="container-x flex items-center justify-between">
         <Logo />
 
         {/* Center navigation */}
-        <nav className="hidden lg:flex items-center gap-9">
+        <nav className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((l) =>
             l.hasDropdown ? (
               <div
@@ -46,11 +46,11 @@ export default function Navbar() {
               >
                 <Link
                   href="/services"
-                  className="flex items-center gap-1.5 text-base font-semibold text-slate-700 hover:text-[#003B73] transition-colors py-2"
+                  className="flex items-center gap-1.5 text-sm font-medium text-slate-700 hover:text-[#003B73] transition-colors py-1.5"
                 >
                   {l.label}
                   <ChevronDown
-                    size={16}
+                    size={15}
                     className={`transition-transform duration-200 ${
                       solutionsOpen ? "rotate-180" : ""
                     }`}
@@ -86,7 +86,7 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-base font-semibold text-slate-700 hover:text-[#003B73] transition-colors"
+                className="text-sm font-medium text-slate-700 hover:text-[#003B73] transition-colors"
               >
                 {l.label}
               </Link>
@@ -98,11 +98,11 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 rounded-full bg-[#003B73] px-7 py-3 text-sm font-bold text-white shadow-md hover:bg-[#062A52] hover:shadow-xl transition-all duration-300 active:scale-[0.98] group"
+            className="inline-flex items-center gap-2.5 rounded-full bg-[#003B73] px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#062A52] hover:shadow-md transition-all duration-300 active:scale-[0.98] group"
           >
             <span>Get a Quote</span>
-            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/20 text-white transition-transform duration-300 group-hover:translate-x-0.5">
-              <ArrowUpRight size={15} />
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-white transition-transform duration-300 group-hover:translate-x-0.5">
+              <ArrowUpRight size={13} />
             </span>
           </Link>
         </div>
@@ -111,7 +111,7 @@ export default function Navbar() {
         <div className="lg:hidden flex items-center gap-3">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-1.5 rounded-full bg-[#003B73] px-4 py-2 text-xs font-bold text-white shadow-sm"
+            className="inline-flex items-center gap-1.5 rounded-full bg-[#003B73] px-3.5 py-1.5 text-xs font-semibold text-white shadow-sm"
           >
             Quote
             <ArrowUpRight size={13} />
@@ -119,12 +119,13 @@ export default function Navbar() {
           <button
             aria-label="Toggle navigation menu"
             onClick={() => setOpen(!open)}
-            className="p-2 text-navy rounded-lg hover:bg-slate-100"
+            className="p-1.5 text-navy rounded-lg hover:bg-slate-100"
           >
-            {open ? <X size={26} /> : <Menu size={26} />}
+            {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
+
 
 
       {/* Mobile menu dropdown */}
