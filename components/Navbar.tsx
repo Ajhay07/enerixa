@@ -32,7 +32,7 @@ export default function Navbar() {
       }`}
     >
       <div className="container-x flex items-center justify-between">
-        <Logo />
+        <Logo priority />
 
         {/* Center navigation */}
         <nav className="hidden lg:flex items-center gap-8">
