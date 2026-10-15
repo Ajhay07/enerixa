@@ -11,10 +11,10 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-4">
             <Logo />
-            <p className="text-xs font-medium text-slate-600 tracking-wide pt-2">
+            <p className="text-sm font-semibold text-slate-700 pt-2">
               Smart Energy &middot; Smart Automation &middot; Smart Security
             </p>
-            <p className="text-xs text-slate-500 max-w-sm leading-relaxed">
+            <p className="text-sm text-slate-500 max-w-sm leading-relaxed">
               Complete rooftop solar plants, cutting-edge smart home automation,
               and enterprise-grade CCTV security systems for homes, businesses and
               industries.
@@ -23,8 +23,8 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="font-heading text-sm font-semibold text-ink">Quick Links</h4>
-            <ul className="space-y-2 text-xs text-slate-600">
+            <h4 className="font-heading text-base font-bold text-ink">Quick Links</h4>
+            <ul className="space-y-2.5 text-sm text-slate-600">
               <li>
                 <Link href="/" className="hover:text-[#003B73]">
                   Home
@@ -60,8 +60,8 @@ export default function Footer() {
 
           {/* Our Solutions */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-heading text-sm font-semibold text-ink">Our Solutions</h4>
-            <ul className="space-y-2 text-xs text-slate-600">
+            <h4 className="font-heading text-base font-bold text-ink">Our Solutions</h4>
+            <ul className="space-y-2.5 text-sm text-slate-600">
               <li>
                 <Link href="/services#solar" className="hover:text-[#003B73]">
                   Rooftop Solar Solutions
@@ -82,23 +82,23 @@ export default function Footer() {
 
           {/* Get in Touch */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-heading text-sm font-semibold text-ink">Get in Touch</h4>
-            <ul className="space-y-2.5 text-xs text-slate-600">
+            <h4 className="font-heading text-base font-bold text-ink">Get in Touch</h4>
+            <ul className="space-y-3 text-sm text-slate-600">
               <li>
-                <a href={COMPANY.phoneHref} className="flex items-center gap-2 hover:text-[#003B73]">
-                  <Phone size={13} className="text-[#003B73]" />
+                <a href={COMPANY.phoneHref} className="flex items-center gap-2.5 hover:text-[#003B73]">
+                  <Phone size={15} className="text-[#003B73]" />
                   <span>{COMPANY.phone}</span>
                 </a>
               </li>
               <li>
-                <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-2 hover:text-[#003B73]">
-                  <Mail size={13} className="text-[#003B73]" />
+                <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-2.5 hover:text-[#003B73]">
+                  <Mail size={15} className="text-[#003B73]" />
                   <span>{COMPANY.email}</span>
                 </a>
               </li>
               <li>
-                <a href={`https://${COMPANY.website}`} className="flex items-center gap-2 hover:text-[#003B73]">
-                  <Globe size={13} className="text-[#003B73]" />
+                <a href={`https://${COMPANY.website}`} className="flex items-center gap-2.5 hover:text-[#003B73]">
+                  <Globe size={15} className="text-[#003B73]" />
                   <span>{COMPANY.website}</span>
                 </a>
               </li>
@@ -121,7 +121,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-[#003B73] text-slate-300 py-3 text-xs">
+      <div className="bg-[#003B73] text-slate-300 py-4 text-sm">
         <div className="container-x flex flex-col sm:flex-row items-center justify-between gap-2">
           <p>© {new Date().getFullYear()} Enerixa. All rights reserved.</p>
           <div className="flex items-center gap-4 text-slate-300">

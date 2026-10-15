@@ -2,110 +2,107 @@ import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
-import { ArrowRight } from "lucide-react";
+import { Sun, Home, Shield, CheckCircle2, ArrowRight } from "lucide-react";
 
 export function SolutionsSection() {
   const solutions = [
     {
-      num: "01",
       title: "Rooftop Solar Solutions",
       desc: "Reliable, high-yield photovoltaic solar plants engineered for residential villas, commercial complexes, and industrial warehouses.",
       image: "/solution-solar.jpg",
+      icon: Sun,
       features: [
         "Residential, Commercial & Industrial Solar",
         "Net Metering & Subsidy Support",
-        "Tier 1 High-Efficiency Mono PERC / TopCon",
+        "Tier 1 High-Efficiency Panels",
         "25+ Years Performance Warranty",
       ],
       href: "/services#solar",
     },
     {
-      num: "02",
       title: "Home Automation Solutions",
       desc: "Elevate your property into a synchronized smart habitat with centralized lighting, automated climate, and touchless control.",
       image: "/solution-home.jpg",
+      icon: Home,
       features: [
-        "Smart Ambient Lighting Control",
-        "Smart AC, HVAC & Climate Control",
+        "Smart Lighting & Climate Control",
         "Smart Curtains & Blinds Automation",
+        "Automated Scenes & Scheduling",
         "Alexa & Google Voice Integration",
       ],
       href: "/services#automation",
     },
     {
-      num: "03",
       title: "Security & Surveillance",
       desc: "Enterprise-grade surveillance infrastructure and proactive perimeter security engineered for maximum protection.",
       image: "/solution-security.jpg",
+      icon: Shield,
       features: [
         "High-Definition CCTV Surveillance",
-        "Network IP Cameras & Color Night Vision",
+        "Network IP Cameras & Night Vision",
         "24/7 Cloud & Local NVR Recording",
-        "Worldwide Remote Mobile Live Streaming",
+        "Remote Mobile Live Streaming",
       ],
       href: "/services#security",
     },
   ];
 
   return (
-    <section id="solutions" className="py-20 sm:py-24 lg:py-32 bg-white">
+    <section id="solutions" className="py-20 sm:py-24 lg:py-28 bg-[#F6F8FA]">
       <div className="container-x">
         <SectionHeading
+          center
           eyebrow="Our Solutions"
-          title="Complete solutions under one roof."
-          subtitle="From clean solar generation to intelligent living automation and fortress-grade security — engineered end-to-end."
+          title="Complete Solutions Under One Roof"
+          subtitle="From clean solar generation to intelligent living automation and fortress-grade security, we deliver end-to-end turnkey engineering."
         />
 
-        <div className="mt-2 border-t border-slate-200">
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((item, idx) => (
             <Reveal
               key={item.title}
-              delay={idx * 0.06}
-              className="border-b border-slate-200 py-12 lg:py-16"
+              delay={idx * 0.1}
+              className="group flex flex-col rounded-2xl bg-white shadow-md hover:shadow-xl border border-slate-100 overflow-hidden transition-shadow duration-300"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
-                <div
-                  className={`lg:col-span-6 relative aspect-[4/3] lg:aspect-[5/4] ${
-                    idx % 2 === 1 ? "lg:order-2" : ""
-                  }`}
+              <div className="relative h-52 w-full overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+
+              <div className="p-7 flex-1 flex flex-col">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#E8F5E9] text-[#5FAF35]">
+                    <item.icon size={20} />
+                  </div>
+                  <h3 className="font-heading text-xl font-bold text-ink">{item.title}</h3>
+                </div>
+
+                <p className="text-[15px] leading-relaxed text-slate-600">{item.desc}</p>
+
+                <ul className="mt-5 space-y-2.5">
+                  {item.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2.5 text-sm font-medium text-slate-700">
+                      <CheckCircle2 size={16} className="shrink-0 text-[#5FAF35] mt-0.5" />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href={item.href}
+                  className="group/link mt-6 pt-5 border-t border-slate-100 inline-flex items-center gap-2 text-sm font-semibold text-[#003B73] hover:text-[#5FAF35] transition-colors"
                 >
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  Learn More
+                  <ArrowRight
+                    size={16}
+                    className="transition-transform duration-200 group-hover/link:translate-x-1"
                   />
-                </div>
-                <div className={`lg:col-span-6 ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <span className="font-heading text-sm font-medium text-slate-400 tracking-widest">
-                    {item.num}
-                  </span>
-                  <h3 className="mt-3 font-heading text-2xl sm:text-3xl font-semibold tracking-[-0.01em] text-ink">
-                    {item.title}
-                  </h3>
-                  <p className="mt-4 text-base leading-relaxed text-slate-600 max-w-lg">
-                    {item.desc}
-                  </p>
-                  <ul className="mt-6 space-y-2.5">
-                    {item.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2.5 text-sm text-slate-700">
-                        <span className="mt-2 h-1 w-1 rounded-full bg-[#5FAF35] shrink-0" />
-                        <span>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href={item.href}
-                    className="group mt-7 inline-flex items-center gap-2 text-sm font-medium text-[#003B73] hover:text-[#5FAF35] transition-colors"
-                  >
-                    View System Details
-                    <ArrowRight
-                      size={15}
-                      className="transition-transform duration-200 group-hover:translate-x-0.5"
-                    />
-                  </Link>
-                </div>
+                </Link>
               </div>
             </Reveal>
           ))}

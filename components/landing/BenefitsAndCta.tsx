@@ -14,56 +14,50 @@ export function BenefitsSection() {
   ];
 
   return (
-    <section className="py-20 sm:py-24 lg:py-32 bg-paper">
+    <section className="py-20 sm:py-24 lg:py-28 bg-white">
       <div className="container-x">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          <div className="lg:col-span-5">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+          <div className="lg:col-span-6">
             <Reveal>
-              <div className="flex items-center gap-3 mb-5">
-                <span className="h-px w-8 bg-[#5FAF35]" />
-                <span className="text-[11px] sm:text-xs font-medium uppercase tracking-[0.18em] text-slate-500">
-                  Benefits
-                </span>
+              <div className="text-sm font-semibold uppercase tracking-wide text-[#5FAF35] mb-3">
+                Benefits You Get
               </div>
-              <h3 className="font-heading text-[28px] sm:text-[32px] font-semibold tracking-[-0.015em] leading-[1.15] text-ink">
-                Invest in clean energy, reap decades of savings.
+              <h3 className="font-heading text-[30px] sm:text-[34px] font-bold leading-[1.2] text-ink">
+                Invest in Clean Energy, Reap Decades of Savings
               </h3>
             </Reveal>
 
             <Reveal delay={0.08}>
-              <ul className="mt-8 divide-y divide-slate-200 border-t border-slate-200">
+              <ul className="mt-7 space-y-4">
                 {benefits.map((b) => (
-                  <li key={b} className="flex items-start gap-3 py-4">
-                    <CheckCircle2 size={17} className="shrink-0 text-[#5FAF35] mt-0.5" />
-                    <span className="text-sm sm:text-base text-ink/80 leading-snug">{b}</span>
+                  <li key={b} className="flex items-start gap-3.5">
+                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#E8F5E9] text-[#5FAF35] mt-0.5">
+                      <CheckCircle2 size={15} />
+                    </div>
+                    <span className="text-base font-medium text-slate-700 leading-snug">{b}</span>
                   </li>
                 ))}
               </ul>
             </Reveal>
 
             <Reveal delay={0.14}>
-              <p className="mt-6 text-xs text-slate-500 leading-relaxed">
+              <p className="mt-7 text-sm text-slate-500 leading-relaxed">
                 *Subject to Central Government PM Surya Ghar guidelines, state
                 DISCOM approvals and load sanctions.
               </p>
             </Reveal>
           </div>
 
-          <div className="lg:col-span-7">
-            <Reveal delay={0.15} className="relative aspect-[4/3] lg:aspect-[16/11] lg:h-[460px]">
+          <div className="lg:col-span-6">
+            <Reveal delay={0.15} className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
               <Image
                 src="/benefits-solar.jpg"
                 alt="Solar panel carport shading parked cars at a residential property"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 55vw"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </Reveal>
-            <p className="mt-4 text-sm text-slate-500 max-w-md">
-              Tier-1 monocrystalline bifacial PERC modules, engineered for
-              maximum yield under tropical heat, low-light dawn/dusk, and
-              overcast monsoon conditions.
-            </p>
           </div>
         </div>
       </div>
@@ -73,39 +67,36 @@ export function BenefitsSection() {
 
 export function CtaSection() {
   return (
-    <section className="py-20 sm:py-24 lg:py-28 bg-[#003B73]">
+    <section className="py-16 sm:py-20 bg-white">
       <div className="container-x">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-8">
-            <Reveal>
-              <h2 className="font-heading text-[28px] sm:text-[36px] lg:text-[42px] font-semibold tracking-[-0.015em] leading-[1.1] text-white">
-                Let&apos;s build a smarter, greener, and more secure tomorrow.
+        <Reveal className="rounded-2xl bg-[#003B73] px-8 py-12 sm:px-12 sm:py-14 lg:px-16 lg:py-16 shadow-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-8">
+              <h2 className="font-heading text-[28px] sm:text-[34px] lg:text-[38px] font-bold leading-[1.2] text-white">
+                Let&apos;s Build a Smarter,{" "}
+                <span className="text-[#5FAF35]">Greener</span> Tomorrow
               </h2>
-              <p className="mt-5 text-base sm:text-lg leading-relaxed text-white/75 max-w-xl">
+              <p className="mt-4 text-base sm:text-lg leading-relaxed text-white/75 max-w-xl">
                 Get in touch with our certified engineering team for an
                 on-site feasibility survey, ROI solar yield simulation, and
                 complete turnkey execution estimate.
               </p>
-            </Reveal>
-          </div>
+            </div>
 
-          <div className="lg:col-span-4 flex flex-col items-start lg:items-end gap-5">
-            <Reveal delay={0.08}>
+            <div className="lg:col-span-4 flex flex-col items-start lg:items-end gap-5">
               <Button variant="white" href="/contact">
                 Get a Free Consultation
               </Button>
-            </Reveal>
-            <Reveal delay={0.12}>
               <a
                 href="tel:+919710294225"
-                className="inline-flex items-center gap-2.5 text-sm font-medium text-white/85 hover:text-white transition-colors"
+                className="inline-flex items-center gap-2.5 text-sm font-semibold text-white/90 hover:text-white transition-colors"
               >
-                <Phone size={15} />
+                <Phone size={16} />
                 <span>Call +91 97102 94225</span>
               </a>
-            </Reveal>
+            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

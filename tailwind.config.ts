@@ -32,9 +32,9 @@ const config: Config = {
           accent: "#43A047",
           subtle: "#E8F5E9",
         },
-        mist: "#F4F7FA",
-        paper: "#F6F4EF",
-        ink: "#10202E",
+        mist: "#F6F8FA",
+        paper: "#F6F8FA",
+        ink: "#17212B",
         steel: "#5B6B7F",
         slate: {
           muted: "#64748B",

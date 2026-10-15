@@ -59,12 +59,13 @@ export function SubsidySection() {
     <section
       id="subsidy"
       aria-label="Solar Subsidy & Benefits"
-      className="scroll-mt-24 py-20 sm:py-24 lg:py-32 bg-white"
+      className="scroll-mt-24 py-20 sm:py-24 lg:py-28 bg-white"
     >
       <div className="container-x">
         <SectionHeading
+          center
           eyebrow="Subsidy & Guidelines"
-          title="Make your solar investment more affordable."
+          title="Make Your Solar Investment More Affordable"
           subtitle="Eligible residential customers in Tamil Nadu can combine the PM Surya Ghar central subsidy with the Tamil Nadu state subsidy."
         />
 
@@ -74,19 +75,19 @@ export function SubsidySection() {
             <Reveal
               key={scheme.title}
               delay={idx * 0.08}
-              className="border border-slate-200 p-6 sm:p-8"
+              className="rounded-2xl border border-slate-200 bg-[#F6F8FA] p-6 sm:p-8"
             >
-              <h3 className="font-heading text-lg sm:text-xl font-semibold text-ink">
+              <h3 className="font-heading text-xl font-bold text-ink">
                 {scheme.title}
               </h3>
-              <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-slate-500">
+              <p className="mt-1 text-sm font-medium text-slate-500">
                 {scheme.subtitle}
               </p>
-              <dl className="mt-6 divide-y divide-slate-100 border-t border-slate-100">
+              <dl className="mt-6 divide-y divide-slate-200">
                 {scheme.rows.map((row) => (
-                  <div key={row.label} className="flex items-center justify-between py-3">
-                    <dt className="text-sm text-slate-600">{row.label}</dt>
-                    <dd className="font-heading text-base font-semibold text-ink">
+                  <div key={row.label} className="flex items-center justify-between py-3.5">
+                    <dt className="text-[15px] text-slate-600">{row.label}</dt>
+                    <dd className="font-heading text-lg font-bold text-[#003B73]">
                       {row.value}
                     </dd>
                   </div>
@@ -96,36 +97,36 @@ export function SubsidySection() {
           ))}
         </div>
 
-        {/* Maximum combined benefit — restrained single-line callout */}
+        {/* Maximum combined benefit */}
         <Reveal
           delay={0.1}
-          className="mt-6 lg:mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border border-[#5FAF35]/30 bg-[#E8F5E9]/40 px-6 py-5 sm:px-8"
+          className="mt-6 lg:mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-2xl bg-[#E8F5E9] px-6 py-6 sm:px-8"
         >
-          <p className="text-sm sm:text-base text-ink/80">
+          <p className="text-base sm:text-lg font-medium text-ink">
             Combine both schemes for up to{" "}
-            <span className="font-heading font-semibold text-ink">₹1,00,000</span> in
-            total assistance on eligible residential rooftop systems.
+            <span className="font-heading font-extrabold text-[#003B73]">₹1,00,000</span>{" "}
+            in total assistance on eligible residential rooftop systems.
           </p>
         </Reveal>
 
         {/* Comparison table */}
         <div className="mt-14 lg:mt-16">
           <Reveal>
-            <h3 className="font-heading text-lg sm:text-xl font-semibold text-ink mb-5">
+            <h3 className="font-heading text-xl sm:text-2xl font-bold text-ink mb-6">
               {COMPARISON.title}
             </h3>
           </Reveal>
 
           <Reveal delay={0.06}>
-            <div className="overflow-x-auto border border-slate-200">
+            <div className="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
               <table className="w-full min-w-[640px] border-collapse text-left">
                 <thead>
-                  <tr className="border-b border-slate-200 bg-[#F6F4EF]">
+                  <tr className="bg-[#003B73]">
                     {COMPARISON.columns.map((col, i) => (
                       <th
                         key={col}
                         scope="col"
-                        className={`px-5 py-3.5 text-xs font-medium uppercase tracking-[0.1em] text-slate-500 sm:px-6 ${
+                        className={`px-5 py-4 text-sm font-semibold text-white sm:px-6 ${
                           i === 0 ? "text-left" : "text-center"
                         }`}
                       >
@@ -139,27 +140,27 @@ export function SubsidySection() {
                     <tr
                       key={row.capacity}
                       className={`border-b border-slate-100 last:border-0 ${
-                        row.featured ? "bg-[#E8F5E9]/40" : ""
+                        row.featured ? "bg-[#E8F5E9]/50" : "bg-white"
                       }`}
                     >
                       <th
                         scope="row"
-                        className="whitespace-nowrap px-5 py-4 text-sm font-semibold text-ink sm:px-6"
+                        className="whitespace-nowrap px-5 py-4 text-[15px] font-semibold text-ink sm:px-6"
                       >
                         {row.capacity}
                         {row.featured && (
-                          <span className="ml-2 text-xs font-medium text-[#5FAF35]">
-                            — Maximum
+                          <span className="ml-2 inline-block rounded-full bg-[#5FAF35] px-2.5 py-0.5 text-xs font-semibold text-white">
+                            Max
                           </span>
                         )}
                       </th>
-                      <td className="px-5 py-4 text-center text-sm text-slate-600 sm:px-6">
+                      <td className="px-5 py-4 text-center text-[15px] text-slate-600 sm:px-6">
                         {row.central}
                       </td>
-                      <td className="px-5 py-4 text-center text-sm text-slate-600 sm:px-6">
+                      <td className="px-5 py-4 text-center text-[15px] text-slate-600 sm:px-6">
                         {row.state}
                       </td>
-                      <td className="px-5 py-4 text-center text-sm font-semibold text-ink sm:px-6">
+                      <td className="px-5 py-4 text-center text-[15px] font-bold text-[#003B73] sm:px-6">
                         {row.total}
                       </td>
                     </tr>
@@ -170,8 +171,8 @@ export function SubsidySection() {
           </Reveal>
 
           <Reveal delay={0.1} className="mt-5 flex items-start gap-2.5">
-            <Info size={15} className="mt-0.5 shrink-0 text-slate-400" />
-            <div className="space-y-1.5 text-xs leading-relaxed text-slate-500">
+            <Info size={16} className="mt-0.5 shrink-0 text-slate-400" />
+            <div className="space-y-1.5 text-sm leading-relaxed text-slate-500">
               {DISCLAIMERS.map((note) => (
                 <p key={note}>{note}</p>
               ))}
@@ -180,9 +181,10 @@ export function SubsidySection() {
         </div>
 
         {/* Benefit indicators */}
-        <Reveal delay={0.12} className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-slate-200 pt-8">
+        <Reveal delay={0.12} className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 border-t border-slate-200 pt-8">
           {BENEFIT_INDICATORS.map((item) => (
-            <span key={item} className="text-sm text-slate-600">
+            <span key={item} className="flex items-center gap-2 text-sm font-medium text-slate-600">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#5FAF35]" />
               {item}
             </span>
           ))}

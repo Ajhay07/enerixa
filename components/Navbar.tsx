@@ -25,10 +25,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md border-slate-200 py-2.5"
-          : "bg-white/90 backdrop-blur-sm border-transparent py-3 lg:py-3.5"
+          ? "bg-white/95 backdrop-blur-md shadow-sm py-2.5"
+          : "bg-white py-3 lg:py-4"
       }`}
     >
       <div className="container-x flex items-center justify-between">
@@ -46,36 +46,36 @@ export default function Navbar() {
               >
                 <Link
                   href="/services"
-                  className="flex items-center gap-1.5 text-sm font-medium text-ink/70 hover:text-ink transition-colors py-1.5"
+                  className="flex items-center gap-1.5 text-[15px] font-semibold text-ink/80 hover:text-[#003B73] transition-colors py-1.5"
                 >
                   {l.label}
                   <ChevronDown
-                    size={14}
+                    size={15}
                     className={`transition-transform duration-200 ${
                       solutionsOpen ? "rotate-180" : ""
                     }`}
                   />
                 </Link>
                 {solutionsOpen && (
-                  <div className="absolute top-full left-0 w-64 bg-white border border-slate-200 shadow-lg py-2 z-50">
+                  <div className="absolute top-full left-0 w-64 bg-white rounded-xl border border-slate-200 shadow-lg py-2 z-50">
                     <Link
                       href="/#solutions"
                       onClick={() => setSolutionsOpen(false)}
-                      className="block px-4 py-2.5 text-sm font-medium text-ink/80 hover:bg-[#F6F4EF] hover:text-[#003B73]"
+                      className="block px-4 py-2.5 text-sm font-semibold text-ink/80 hover:bg-[#F6F8FA] hover:text-[#003B73] rounded-lg mx-1"
                     >
                       Rooftop Solar Solutions
                     </Link>
                     <Link
                       href="/#solutions"
                       onClick={() => setSolutionsOpen(false)}
-                      className="block px-4 py-2.5 text-sm font-medium text-ink/80 hover:bg-[#F6F4EF] hover:text-[#003B73]"
+                      className="block px-4 py-2.5 text-sm font-semibold text-ink/80 hover:bg-[#F6F8FA] hover:text-[#003B73] rounded-lg mx-1"
                     >
                       Home Automation Solutions
                     </Link>
                     <Link
                       href="/#solutions"
                       onClick={() => setSolutionsOpen(false)}
-                      className="block px-4 py-2.5 text-sm font-medium text-ink/80 hover:bg-[#F6F4EF] hover:text-[#003B73]"
+                      className="block px-4 py-2.5 text-sm font-semibold text-ink/80 hover:bg-[#F6F8FA] hover:text-[#003B73] rounded-lg mx-1"
                     >
                       Security Solutions
                     </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-sm font-medium text-ink/70 hover:text-ink transition-colors"
+                className="text-[15px] font-semibold text-ink/80 hover:text-[#003B73] transition-colors"
               >
                 {l.label}
               </Link>
@@ -98,13 +98,10 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#003B73] px-5 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#062A52] group"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#003B73] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-[#062A52]"
           >
             <span>Get a Quote</span>
-            <ArrowUpRight
-              size={14}
-              className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
+            <ArrowUpRight size={15} />
           </Link>
         </div>
 
@@ -112,7 +109,7 @@ export default function Navbar() {
         <div className="lg:hidden flex items-center gap-3">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-1.5 bg-[#003B73] px-3.5 py-1.5 text-xs font-medium text-white"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-[#003B73] px-3.5 py-2 text-xs font-semibold text-white"
           >
             Quote
             <ArrowUpRight size={13} />
@@ -120,7 +117,7 @@ export default function Navbar() {
           <button
             aria-label="Toggle navigation menu"
             onClick={() => setOpen(!open)}
-            className="p-1.5 text-[#003B73] hover:bg-slate-100"
+            className="p-1.5 text-[#003B73] rounded-lg hover:bg-slate-100"
           >
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -129,14 +126,14 @@ export default function Navbar() {
 
       {/* Mobile menu dropdown */}
       {open && (
-        <div className="lg:hidden bg-white border-t border-slate-200">
+        <div className="lg:hidden bg-white border-t border-slate-200 shadow-lg">
           <nav className="flex flex-col p-5 gap-1">
             {NAV_LINKS.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="py-3 text-base font-medium text-ink/85 hover:text-[#003B73] border-b border-slate-100 last:border-0"
+                className="py-3 text-base font-semibold text-ink/85 hover:text-[#003B73] border-b border-slate-100 last:border-0"
               >
                 {l.label}
               </Link>
@@ -144,7 +141,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-4 flex items-center justify-center gap-2 bg-[#003B73] py-3 text-sm font-medium text-white"
+              className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-[#003B73] py-3 text-sm font-semibold text-white"
             >
               Get a Quote
               <ArrowUpRight size={16} />
