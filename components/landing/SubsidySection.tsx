@@ -77,7 +77,7 @@ export function SubsidySection() {
               delay={idx * 0.08}
               className="rounded-2xl border border-slate-200 bg-[#F6F8FA] p-6 sm:p-8"
             >
-              <h3 className="font-heading text-xl font-bold text-ink">
+              <h3 className="font-heading text-xl font-semibold text-ink">
                 {scheme.title}
               </h3>
               <p className="mt-1 text-sm font-medium text-slate-500">
@@ -87,7 +87,7 @@ export function SubsidySection() {
                 {scheme.rows.map((row) => (
                   <div key={row.label} className="flex items-center justify-between py-3.5">
                     <dt className="text-[15px] text-slate-600">{row.label}</dt>
-                    <dd className="font-heading text-lg font-bold text-[#003B73]">
+                    <dd className="font-heading text-lg font-semibold text-[#003B73]">
                       {row.value}
                     </dd>
                   </div>
@@ -104,7 +104,7 @@ export function SubsidySection() {
         >
           <p className="text-base sm:text-lg font-medium text-ink">
             Combine both schemes for up to{" "}
-            <span className="font-heading font-extrabold text-[#003B73]">₹1,00,000</span>{" "}
+            <span className="font-heading font-bold text-[#003B73]">₹1,00,000</span>{" "}
             in total assistance on eligible residential rooftop systems.
           </p>
         </Reveal>

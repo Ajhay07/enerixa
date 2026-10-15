@@ -68,7 +68,7 @@ export function WhyChooseSection() {
               <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#5FAF35]/20 text-[#5FAF35] mb-4">
                 <r.icon size={22} />
               </div>
-              <h4 className="font-heading text-lg font-bold text-white">{r.title}</h4>
+              <h4 className="font-heading text-lg font-semibold text-white">{r.title}</h4>
               <p className="mt-2 text-sm leading-relaxed text-white/70">{r.desc}</p>
             </Reveal>
           ))}
@@ -132,10 +132,10 @@ export function ProcessSection() {
                 <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-[#003B73] text-white shadow-md mb-5">
                   <st.icon size={24} />
                 </div>
-                <span className="text-xs font-bold text-[#5FAF35] uppercase tracking-wide">
+                <span className="text-xs font-medium text-[#5FAF35] uppercase tracking-wide">
                   Step {st.num}
                 </span>
-                <h4 className="mt-2 font-heading text-base font-bold text-ink leading-snug">
+                <h4 className="mt-2 font-heading text-base font-semibold text-ink leading-snug">
                   {st.title}
                 </h4>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{st.desc}</p>

@@ -46,7 +46,7 @@ export default function Navbar() {
               >
                 <Link
                   href="/services"
-                  className="flex items-center gap-1.5 text-[15px] font-semibold text-ink/80 hover:text-[#003B73] transition-colors py-1.5"
+                  className="flex items-center gap-1.5 text-[15px] font-medium text-ink/80 hover:text-[#003B73] transition-colors py-1.5"
                 >
                   {l.label}
                   <ChevronDown
@@ -61,21 +61,21 @@ export default function Navbar() {
                     <Link
                       href="/#solutions"
                       onClick={() => setSolutionsOpen(false)}
-                      className="block px-4 py-2.5 text-sm font-semibold text-ink/80 hover:bg-[#F6F8FA] hover:text-[#003B73] rounded-lg mx-1"
+                      className="block px-4 py-2.5 text-sm font-medium text-ink/80 hover:bg-[#F6F8FA] hover:text-[#003B73] rounded-lg mx-1"
                     >
                       Rooftop Solar Solutions
                     </Link>
                     <Link
                       href="/#solutions"
                       onClick={() => setSolutionsOpen(false)}
-                      className="block px-4 py-2.5 text-sm font-semibold text-ink/80 hover:bg-[#F6F8FA] hover:text-[#003B73] rounded-lg mx-1"
+                      className="block px-4 py-2.5 text-sm font-medium text-ink/80 hover:bg-[#F6F8FA] hover:text-[#003B73] rounded-lg mx-1"
                     >
                       Home Automation Solutions
                     </Link>
                     <Link
                       href="/#solutions"
                       onClick={() => setSolutionsOpen(false)}
-                      className="block px-4 py-2.5 text-sm font-semibold text-ink/80 hover:bg-[#F6F8FA] hover:text-[#003B73] rounded-lg mx-1"
+                      className="block px-4 py-2.5 text-sm font-medium text-ink/80 hover:bg-[#F6F8FA] hover:text-[#003B73] rounded-lg mx-1"
                     >
                       Security Solutions
                     </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-[15px] font-semibold text-ink/80 hover:text-[#003B73] transition-colors"
+                className="text-[15px] font-medium text-ink/80 hover:text-[#003B73] transition-colors"
               >
                 {l.label}
               </Link>
@@ -98,7 +98,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-[#003B73] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-[#062A52]"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#003B73] px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-colors duration-200 hover:bg-[#062A52]"
           >
             <span>Get a Quote</span>
             <ArrowUpRight size={15} />
@@ -109,7 +109,7 @@ export default function Navbar() {
         <div className="lg:hidden flex items-center gap-3">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-1.5 rounded-lg bg-[#003B73] px-3.5 py-2 text-xs font-semibold text-white"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-[#003B73] px-3.5 py-2 text-xs font-bold text-white"
           >
             Quote
             <ArrowUpRight size={13} />
@@ -133,7 +133,7 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="py-3 text-base font-semibold text-ink/85 hover:text-[#003B73] border-b border-slate-100 last:border-0"
+                className="py-3 text-base font-medium text-ink/85 hover:text-[#003B73] border-b border-slate-100 last:border-0"
               >
                 {l.label}
               </Link>
@@ -141,7 +141,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-[#003B73] py-3 text-sm font-semibold text-white"
+              className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-[#003B73] py-3 text-sm font-bold text-white"
             >
               Get a Quote
               <ArrowUpRight size={16} />

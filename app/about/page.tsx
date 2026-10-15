@@ -27,7 +27,7 @@ function Hero() {
           </span>
         </Reveal>
         <Reveal delay={0.2}>
-          <h1 className="mt-5 text-4xl font-extrabold tracking-tight sm:text-5xl">
+          <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
             Energizing Tomorrow, Responsibly.
           </h1>
         </Reveal>
@@ -98,13 +98,13 @@ function MissionVision() {
         <div className="grid gap-10 md:grid-cols-2">
           <Reveal>
             <div className="rounded-xl border border-navy/20 bg-navy p-8">
-              <h3 className="text-xl font-bold text-white">Our Mission</h3>
+              <h3 className="text-xl font-semibold text-white">Our Mission</h3>
               <p className="mt-3 text-slate-300">{MISSION}</p>
             </div>
           </Reveal>
           <Reveal delay={0.15}>
             <div className="rounded-xl border border-navy/20 bg-navy p-8">
-              <h3 className="text-xl font-bold text-white">Our Vision</h3>
+              <h3 className="text-xl font-semibold text-white">Our Vision</h3>
               <p className="mt-3 text-slate-300">{VISION}</p>
             </div>
           </Reveal>
@@ -150,7 +150,7 @@ function WhyChoose() {
           {VALUES.map((v) => (
             <Reveal key={v.title} className="rounded-xl border border-navy/10 bg-white p-6 text-center">
               <div className="mb-4 flex justify-center">{v.icon}</div>
-              <h4 className="text-base font-bold text-navy">{v.title}</h4>
+              <h4 className="text-base font-semibold text-navy">{v.title}</h4>
               <p className="mt-2 text-sm text-steel">{v.desc}</p>
             </Reveal>
           ))}

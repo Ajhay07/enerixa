@@ -13,7 +13,7 @@ export default function Button({
   ...props
 }: BtnProps) {
   const base =
-    "inline-flex items-center justify-center gap-2.5 rounded-lg px-7 py-3.5 text-[15px] font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#5FAF35] shadow-sm hover:shadow-md group";
+    "inline-flex items-center justify-center gap-2.5 rounded-lg px-7 py-3.5 text-[15px] font-bold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#5FAF35] shadow-sm hover:shadow-md group";
 
   let styles = "bg-[#003B73] text-white hover:bg-[#062A52]";
   if (variant === "outline") {

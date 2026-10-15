@@ -19,7 +19,7 @@ export function BenefitsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           <div className="lg:col-span-6">
             <Reveal>
-              <div className="text-sm font-semibold uppercase tracking-wide text-[#5FAF35] mb-3">
+              <div className="text-sm font-medium uppercase tracking-wide text-[#5FAF35] mb-3">
                 Benefits You Get
               </div>
               <h3 className="font-heading text-[30px] sm:text-[34px] font-bold leading-[1.2] text-ink">
@@ -89,7 +89,7 @@ export function CtaSection() {
               </Button>
               <a
                 href="tel:+919710294225"
-                className="inline-flex items-center gap-2.5 text-sm font-semibold text-white/90 hover:text-white transition-colors"
+                className="inline-flex items-center gap-2.5 text-sm font-medium text-white/90 hover:text-white transition-colors"
               >
                 <Phone size={16} />
                 <span>Call +91 97102 94225</span>

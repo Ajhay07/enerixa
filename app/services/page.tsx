@@ -21,7 +21,7 @@ function Hero() {
     <section className="border-b border-navy/10 bg-navy-deep py-20 text-white">
       <div className="container-x text-center">
         <Reveal>
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Complete Energy & Security Solutions
           </h1>
         </Reveal>
@@ -63,7 +63,7 @@ function Card({ id, title, subtitle, items, image, alt, reverse }: CardProps) {
           <Reveal>
             <>
               <span className="eyebrow">{subtitle}</span>
-              <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-navy">
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy">
                 {title}
               </h2>
             </>
@@ -150,7 +150,7 @@ function Cta() {
     <section className="border-t border-navy/10 bg-mist py-16 text-center">
       <div className="container-x">
         <Reveal>
-          <h2 className="text-3xl font-extrabold tracking-tight text-navy">
+          <h2 className="text-3xl font-bold tracking-tight text-navy">
             Ready to get started?
           </h2>
           <p className="mt-3 max-w-xl text-steel">

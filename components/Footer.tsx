@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-4">
             <Logo />
-            <p className="text-sm font-semibold text-slate-700 pt-2">
+            <p className="text-sm font-medium text-slate-700 pt-2">
               Smart Energy &middot; Smart Automation &middot; Smart Security
             </p>
             <p className="text-sm text-slate-500 max-w-sm leading-relaxed">
@@ -23,7 +23,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="font-heading text-base font-bold text-ink">Quick Links</h4>
+            <h4 className="font-heading text-base font-semibold text-ink">Quick Links</h4>
             <ul className="space-y-2.5 text-sm text-slate-600">
               <li>
                 <Link href="/" className="hover:text-[#003B73]">
@@ -60,7 +60,7 @@ export default function Footer() {
 
           {/* Our Solutions */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-heading text-base font-bold text-ink">Our Solutions</h4>
+            <h4 className="font-heading text-base font-semibold text-ink">Our Solutions</h4>
             <ul className="space-y-2.5 text-sm text-slate-600">
               <li>
                 <Link href="/services#solar" className="hover:text-[#003B73]">
@@ -82,7 +82,7 @@ export default function Footer() {
 
           {/* Get in Touch */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-heading text-base font-bold text-ink">Get in Touch</h4>
+            <h4 className="font-heading text-base font-semibold text-ink">Get in Touch</h4>
             <ul className="space-y-3 text-sm text-slate-600">
               <li>
                 <a href={COMPANY.phoneHref} className="flex items-center gap-2.5 hover:text-[#003B73]">

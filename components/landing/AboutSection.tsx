@@ -20,7 +20,7 @@ export function TrustFeatureStrip() {
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10 text-[#5FAF35]">
                 <item.icon size={19} />
               </div>
-              <span className="text-sm font-semibold text-white">{item.title}</span>
+              <span className="text-sm font-medium text-white">{item.title}</span>
             </div>
           ))}
         </div>
@@ -50,7 +50,7 @@ export function AboutSection() {
           {/* Text */}
           <div className="lg:col-span-6">
             <Reveal>
-              <div className="text-sm font-semibold uppercase tracking-wide text-[#5FAF35] mb-3">
+              <div className="text-sm font-medium uppercase tracking-wide text-[#5FAF35] mb-3">
                 About Enerixa
               </div>
               <h2 className="font-heading text-[32px] sm:text-[38px] font-bold leading-[1.2] text-ink">
@@ -70,19 +70,19 @@ export function AboutSection() {
 
             <Reveal delay={0.14} className="mt-8 grid grid-cols-3 gap-6 rounded-xl bg-[#F6F8FA] p-6">
               <div>
-                <div className="font-heading text-3xl sm:text-4xl font-extrabold text-[#003B73]">
+                <div className="font-heading text-3xl sm:text-4xl font-bold text-[#003B73]">
                   <Counter to={25} suffix="+" />
                 </div>
                 <div className="mt-1 text-sm font-medium text-slate-600">Years Lifespan</div>
               </div>
               <div>
-                <div className="font-heading text-3xl sm:text-4xl font-extrabold text-[#5FAF35]">
+                <div className="font-heading text-3xl sm:text-4xl font-bold text-[#5FAF35]">
                   <Counter to={500} suffix="+" />
                 </div>
                 <div className="mt-1 text-sm font-medium text-slate-600">Projects Done</div>
               </div>
               <div>
-                <div className="font-heading text-3xl sm:text-4xl font-extrabold text-[#003B73]">
+                <div className="font-heading text-3xl sm:text-4xl font-bold text-[#003B73]">
                   <Counter to={100} suffix="%" />
                 </div>
                 <div className="mt-1 text-sm font-medium text-slate-600">Satisfaction</div>

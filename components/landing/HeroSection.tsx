@@ -13,7 +13,7 @@ export function HeroSection() {
             <Reveal>
               <div className="inline-flex items-center gap-2 rounded-full bg-white border border-slate-200 px-4 py-1.5 shadow-sm mb-6">
                 <span className="h-2 w-2 rounded-full bg-[#5FAF35]" />
-                <span className="text-sm font-semibold text-[#003B73]">
+                <span className="text-sm font-medium text-[#003B73]">
                   Clean Energy &amp; Smart Living
                 </span>
               </div>
@@ -49,19 +49,19 @@ export function HeroSection() {
                   <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#E8F5E9] text-[#5FAF35]">
                     <Sun size={18} />
                   </div>
-                  <span className="text-sm font-semibold text-ink/80">Rooftop Solar</span>
+                  <span className="text-sm font-medium text-ink/80">Rooftop Solar</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#E8F5E9] text-[#5FAF35]">
                     <Home size={18} />
                   </div>
-                  <span className="text-sm font-semibold text-ink/80">Home Automation</span>
+                  <span className="text-sm font-medium text-ink/80">Home Automation</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#E8F5E9] text-[#5FAF35]">
                     <ShieldCheck size={18} />
                   </div>
-                  <span className="text-sm font-semibold text-ink/80">Security Systems</span>
+                  <span className="text-sm font-medium text-ink/80">Security Systems</span>
                 </div>
               </div>
             </Reveal>

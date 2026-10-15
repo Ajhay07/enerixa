@@ -21,7 +21,7 @@ export default function SectionHeading({
     <Reveal className={`mb-10 lg:mb-12 max-w-3xl ${center ? "mx-auto text-center" : "text-left"}`}>
       {label && (
         <div
-          className={`mb-3 inline-flex items-center gap-2 text-sm font-semibold tracking-wide uppercase ${
+          className={`mb-3 inline-flex items-center gap-2 text-sm font-medium tracking-wide uppercase ${
             light ? "text-[#8FD16A]" : "text-[#5FAF35]"
           }`}
         >

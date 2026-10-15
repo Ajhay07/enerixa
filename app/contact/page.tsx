@@ -18,7 +18,7 @@ function Hero() {
     <section className="border-b border-navy/10 bg-navy-deep py-20 text-white">
       <div className="container-x text-center">
         <Reveal>
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Let's Talk About Your Project
           </h1>
         </Reveal>

@@ -47,7 +47,7 @@ export default function ProjectsPage() {
                 </span>
               </div>
               <div className="p-5">
-                <h3 className="text-lg font-bold text-navy">{p.title}</h3>
+                <h3 className="text-lg font-semibold text-navy">{p.title}</h3>
                 <p className="mt-1 text-sm text-steel">{p.location}</p>
                 <p className="mt-2 text-sm text-steel">{p.detail}</p>
               </div>

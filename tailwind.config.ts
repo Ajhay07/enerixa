@@ -42,16 +42,17 @@ const config: Config = {
       },
       fontFamily: {
         sans: [
-          "var(--font-inter)",
+          "var(--font-sans)",
           "system-ui",
           "-apple-system",
           "Segoe UI",
           "sans-serif",
         ],
         heading: [
-          "var(--font-heading)",
-          "var(--font-inter)",
+          "var(--font-sans)",
           "system-ui",
+          "-apple-system",
+          "Segoe UI",
           "sans-serif",
         ],
       },

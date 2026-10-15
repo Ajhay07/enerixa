@@ -1,21 +1,14 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Manrope } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
 const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-heading",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -46,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable} ${manrope.variable}`}>
+    <html lang="en" className={`scroll-smooth ${manrope.variable}`}>
       <body className="overflow-x-hidden antialiased bg-white text-ink font-sans">
         <Navbar />
         <main>{children}</main>
