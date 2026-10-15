@@ -35,7 +35,7 @@ export default function Navbar() {
         <Logo priority />
 
         {/* Center navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center lg:gap-6 xl:gap-8">
           {NAV_LINKS.map((l) =>
             l.hasDropdown ? (
               <div

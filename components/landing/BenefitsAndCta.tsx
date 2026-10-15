@@ -55,7 +55,7 @@ export function BenefitsSection() {
           <Reveal delay={0.15} className="lg:col-span-7 relative rounded-[2rem] overflow-hidden shadow-xl border-4 border-white min-h-[380px] lg:min-h-[460px]">
             <Image
               src="/benefits-solar.jpg"
-              alt="High efficiency rooftop solar installation under bright blue sky"
+              alt="Solar panel carport shading parked cars at a residential property"
               fill
               className="object-cover scale-[1.01] hover:scale-105 transition-transform duration-700"
               sizes="(max-width: 1024px) 100vw, 60vw"

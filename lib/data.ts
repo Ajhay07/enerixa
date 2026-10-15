@@ -73,6 +73,7 @@ export const NAV_LINKS = [
   { href: "/#solutions", label: "Solutions", hasDropdown: true },
   { href: "/#why-us", label: "Why Us" },
   { href: "/#process", label: "Process" },
+  { href: "/#subsidy", label: "Subsidy" },
   { href: "/contact", label: "Contact" },
 ];
 

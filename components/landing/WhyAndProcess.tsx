@@ -53,7 +53,7 @@ export function WhyChooseSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/why-bg.jpg"
-          alt="Modern luxury property at dusk with clean solar power"
+          alt="Rooftop solar panel array at sunset with city skyline"
           fill
           className="object-cover opacity-35 scale-105"
           sizes="100vw"

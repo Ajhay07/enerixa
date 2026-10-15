@@ -1,12 +1,14 @@
 import { Reveal } from "@/components/Reveal";
 
 export default function SectionHeading({
+  badge,
   eyebrow,
   title,
   subtitle,
   center = false,
   light = false,
 }: {
+  badge?: React.ReactNode;
   eyebrow?: string;
   title?: string;
   subtitle?: string;
@@ -15,6 +17,19 @@ export default function SectionHeading({
 }) {
   return (
     <Reveal className={`mb-14 lg:mb-16 max-w-4xl ${center ? "mx-auto text-center" : "text-left"}`}>
+      {badge && (
+        <div className={`mb-5 flex ${center ? "justify-center" : "justify-start"}`}>
+          <span
+            className={`inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs sm:text-sm font-bold ${
+              light
+                ? "border-white/20 bg-white/10 text-white"
+                : "border-[#003B73]/10 bg-[#003B73]/[0.04] text-[#003B73]"
+            }`}
+          >
+            {badge}
+          </span>
+        </div>
+      )}
       {eyebrow && (
         <div className={`mb-4 flex items-center gap-2.5 ${center ? "justify-center" : "justify-start"}`}>
           <span className="h-2 w-2 rounded-full bg-[#5FAF35]" />

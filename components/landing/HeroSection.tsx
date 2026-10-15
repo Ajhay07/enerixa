@@ -92,7 +92,7 @@ export function HeroSection() {
               <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] border-4 sm:border-6 border-white bg-slate-900 aspect-[16/11] lg:aspect-[16/11] xl:aspect-[16/11]">
                 <Image
                   src="/hero-solar-home.jpg"
-                  alt="Modern luxury villa with solar panels and smart lighting"
+                  alt="Residential villa with rooftop solar panel installation surrounded by palm trees"
                   fill
                   priority
                   className="object-cover scale-[1.01] hover:scale-105 transition-transform duration-700"

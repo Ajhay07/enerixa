@@ -114,7 +114,7 @@ export function AboutSection() {
               <div className="relative rounded-[2rem] overflow-hidden shadow-xl border-4 border-white bg-slate-100 aspect-[16/11]">
                 <Image
                   src="/about-solar-field.jpg"
-                  alt="Vast rooftop solar panels field at sunset"
+                  alt="Commercial building rooftop fitted with a large solar panel array"
                   fill
                   className="object-cover scale-[1.01] hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 1024px) 100vw, 50vw"

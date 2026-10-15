@@ -3,6 +3,7 @@ import { TrustFeatureStrip, AboutSection } from "@/components/landing/AboutSecti
 import { SolutionsSection } from "@/components/landing/SolutionsSection";
 import { WhyChooseSection, ProcessSection } from "@/components/landing/WhyAndProcess";
 import { BenefitsSection, CtaSection } from "@/components/landing/BenefitsAndCta";
+import { SubsidySection } from "@/components/landing/SubsidySection";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <WhyChooseSection />
       <ProcessSection />
       <BenefitsSection />
+      <SubsidySection />
       <CtaSection />
     </>
   );
