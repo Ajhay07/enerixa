@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 type RevealProps = {
   children: React.ReactNode;
@@ -10,14 +10,13 @@ type RevealProps = {
   y?: number;
 };
 
-export function Reveal({ children, className, delay = 0, y = 28 }: RevealProps) {
+export function Reveal({ children, className, delay = 0, y = 16 }: RevealProps) {
   return (
     <motion.div
       className={className}
       initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "0px" }}
-      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>
@@ -51,16 +50,9 @@ export function ImageReveal({
 }
 
 export function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
   return (
-    <span ref={ref}>
-      <motion.span
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
-      >
-        <CountUp to={to} run={inView} />
-      </motion.span>
+    <span>
+      <CountUp to={to} run />
       {suffix}
     </span>
   );
@@ -68,19 +60,21 @@ export function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 
 function CountUp({ to, run }: { to: number; run: boolean }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const started = useRef(false);
 
-  if (run && !started.current) {
-    started.current = true;
+  useEffect(() => {
+    if (!run) return;
     const start = performance.now();
     const dur = 1400;
+    let frame: number;
     const step = (t: number) => {
       const p = Math.min(1, (t - start) / dur);
       const eased = 1 - Math.pow(1 - p, 3);
       if (ref.current) ref.current.textContent = String(Math.round(to * eased));
-      if (p < 1) requestAnimationFrame(step);
+      if (p < 1) frame = requestAnimationFrame(step);
     };
-    requestAnimationFrame(step);
-  }
+    frame = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(frame);
+  }, [run, to]);
+
   return <span ref={ref}>0</span>;
 }
