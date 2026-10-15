@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
-import { Sun, Home, Shield, CheckCircle2, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function SolutionsSection() {
   const solutions = [
@@ -11,15 +11,11 @@ export function SolutionsSection() {
       title: "Rooftop Solar Solutions",
       desc: "Reliable, high-yield photovoltaic solar plants engineered for residential villas, commercial complexes, and industrial warehouses.",
       image: "/solution-solar.jpg",
-      badgeIcon: Sun,
-      badgeBg: "bg-[#5FAF35]",
       features: [
-        "Residential Rooftop Solar",
-        "Commercial & Industrial Solar",
+        "Residential, Commercial & Industrial Solar",
         "Net Metering & Subsidy Support",
         "Tier 1 High-Efficiency Mono PERC / TopCon",
         "25+ Years Performance Warranty",
-        "Remote Solar Plant Monitoring",
       ],
       href: "/services#solar",
     },
@@ -28,14 +24,10 @@ export function SolutionsSection() {
       title: "Home Automation Solutions",
       desc: "Elevate your property into a synchronized smart habitat with centralized lighting, automated climate, and touchless control.",
       image: "/solution-home.jpg",
-      badgeIcon: Home,
-      badgeBg: "bg-[#003B73]",
       features: [
         "Smart Ambient Lighting Control",
         "Smart AC, HVAC & Climate Control",
         "Smart Curtains & Blinds Automation",
-        "Automated Scenes & Scheduling",
-        "Smartphone & Tablet Central Hub",
         "Alexa & Google Voice Integration",
       ],
       href: "/services#automation",
@@ -45,93 +37,73 @@ export function SolutionsSection() {
       title: "Security & Surveillance",
       desc: "Enterprise-grade surveillance infrastructure and proactive perimeter security engineered for maximum protection.",
       image: "/solution-security.jpg",
-      badgeIcon: Shield,
-      badgeBg: "bg-[#5FAF35]",
       features: [
         "High-Definition CCTV Surveillance",
         "Network IP Cameras & Color Night Vision",
         "24/7 Cloud & Local NVR Recording",
-        "AI Motion & Intrusion Alerts",
         "Worldwide Remote Mobile Live Streaming",
-        "Turnkey Installation & Comprehensive AMC",
       ],
       href: "/services#security",
     },
   ];
 
-
   return (
-    <section id="solutions" className="py-20 sm:py-24 lg:py-28 bg-[#F4F7FA]/80">
+    <section id="solutions" className="py-20 sm:py-24 lg:py-32 bg-white">
       <div className="container-x">
         <SectionHeading
-          center
-          eyebrow="OUR SOLUTIONS"
-          title="Complete Solutions Under One Roof"
-          subtitle="From clean solar energy generation to intelligent living automation and fortress-grade security, we deliver end-to-end turnkey engineering."
+          eyebrow="Our Solutions"
+          title="Complete solutions under one roof."
+          subtitle="From clean solar generation to intelligent living automation and fortress-grade security — engineered end-to-end."
         />
 
-        <div className="mt-12 sm:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8 xl:gap-10">
+        <div className="mt-2 border-t border-slate-200">
           {solutions.map((item, idx) => (
             <Reveal
               key={item.title}
-              delay={idx * 0.12}
-              className="group flex flex-col rounded-[2rem] bg-white shadow-[0_10px_30px_-10px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_45px_-10px_rgba(0,59,115,0.18)] border border-slate-200/80 overflow-hidden transition-all duration-500 hover:-translate-y-2"
+              delay={idx * 0.06}
+              className="border-b border-slate-200 py-12 lg:py-16"
             >
-              {/* Image Header occupying 45% */}
-              <div className="relative h-60 sm:h-64 w-full overflow-hidden bg-slate-900">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105 group-hover:brightness-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
-                
-                {/* Floating Badge Icon */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
                 <div
-                  className={`absolute -bottom-6 left-7 flex h-13 w-13 p-2.5 items-center justify-center rounded-xl ${item.badgeBg} text-white shadow-xl border-3 border-white transition-transform group-hover:scale-110 duration-300`}
+                  className={`lg:col-span-6 relative aspect-[4/3] lg:aspect-[5/4] ${
+                    idx % 2 === 1 ? "lg:order-2" : ""
+                  }`}
                 >
-                  <item.badgeIcon size={24} className="stroke-[2.5]" />
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
                 </div>
-
-                <span className="absolute top-4 right-4 text-xs font-black text-white bg-black/50 backdrop-blur-md rounded-full px-3 py-1 border border-white/20">
-                  {item.num}
-                </span>
-              </div>
-
-              {/* Card Body with tighter internal padding */}
-              <div className="p-6 sm:p-8 pt-10 sm:pt-11 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-xl sm:text-[22px] font-black text-slate-900 tracking-tight group-hover:text-[#003B73] transition-colors leading-snug">
+                <div className={`lg:col-span-6 ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
+                  <span className="font-heading text-sm font-medium text-slate-400 tracking-widest">
+                    {item.num}
+                  </span>
+                  <h3 className="mt-3 font-heading text-2xl sm:text-3xl font-semibold tracking-[-0.01em] text-ink">
                     {item.title}
                   </h3>
-                  <p className="mt-2.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                  <p className="mt-4 text-base leading-relaxed text-slate-600 max-w-lg">
                     {item.desc}
                   </p>
-
-                  <div className="mt-6 pt-5 border-t border-slate-100">
-                    <div className="text-[11px] font-black uppercase tracking-wider text-[#003B73] mb-3">
-                      Key Highlights:
-                    </div>
-                    <ul className="space-y-2.5">
-                      {item.features.map((f) => (
-                        <li key={f} className="flex items-center gap-2.5 text-sm font-semibold text-slate-700">
-                          <CheckCircle2 size={17} className="shrink-0 text-[#5FAF35] stroke-[2.5]" />
-                          <span>{f}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between">
+                  <ul className="mt-6 space-y-2.5">
+                    {item.features.map((f) => (
+                      <li key={f} className="flex items-start gap-2.5 text-sm text-slate-700">
+                        <span className="mt-2 h-1 w-1 rounded-full bg-[#5FAF35] shrink-0" />
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
                   <Link
                     href={item.href}
-                    className="inline-flex items-center gap-2 text-sm font-bold text-[#003B73] group-hover:text-[#5FAF35] transition-colors"
+                    className="group mt-7 inline-flex items-center gap-2 text-sm font-medium text-[#003B73] hover:text-[#5FAF35] transition-colors"
                   >
-                    <span>View System Details</span>
-                    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    View System Details
+                    <ArrowRight
+                      size={15}
+                      className="transition-transform duration-200 group-hover:translate-x-0.5"
+                    />
                   </Link>
                 </div>
               </div>
@@ -142,5 +114,3 @@ export function SolutionsSection() {
     </section>
   );
 }
-
-

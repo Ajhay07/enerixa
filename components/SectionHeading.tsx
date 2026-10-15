@@ -15,34 +15,28 @@ export default function SectionHeading({
   center?: boolean;
   light?: boolean;
 }) {
+  const label = badge ?? eyebrow;
+
   return (
-    <Reveal className={`mb-14 lg:mb-16 max-w-4xl ${center ? "mx-auto text-center" : "text-left"}`}>
-      {badge && (
-        <div className={`mb-5 flex ${center ? "justify-center" : "justify-start"}`}>
+    <Reveal className={`mb-12 lg:mb-14 max-w-3xl ${center ? "mx-auto text-center" : "text-left"}`}>
+      {label && (
+        <div
+          className={`mb-5 flex items-center gap-3 ${center ? "justify-center" : "justify-start"}`}
+        >
+          <span className={`h-px w-8 shrink-0 ${light ? "bg-white/40" : "bg-[#5FAF35]"}`} />
           <span
-            className={`inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs sm:text-sm font-bold ${
-              light
-                ? "border-white/20 bg-white/10 text-white"
-                : "border-[#003B73]/10 bg-[#003B73]/[0.04] text-[#003B73]"
+            className={`inline-flex items-center gap-2 text-[11px] sm:text-xs font-medium uppercase tracking-[0.16em] ${
+              light ? "text-white/65" : "text-slate-500"
             }`}
           >
-            {badge}
+            {label}
           </span>
-        </div>
-      )}
-      {eyebrow && (
-        <div className={`mb-4 flex items-center gap-2.5 ${center ? "justify-center" : "justify-start"}`}>
-          <span className="h-2 w-2 rounded-full bg-[#5FAF35]" />
-          <span className="text-xs sm:text-sm font-extrabold uppercase tracking-[0.25em] text-[#5FAF35]">
-            {eyebrow}
-          </span>
-          <span className="h-2 w-2 rounded-full bg-[#5FAF35]" />
         </div>
       )}
       {title && (
         <h2
-          className={`text-3xl sm:text-5xl lg:text-[52px] font-black tracking-tight leading-[1.12] ${
-            light ? "text-white" : "text-slate-900"
+          className={`font-heading text-[28px] sm:text-4xl lg:text-[42px] font-semibold tracking-[-0.015em] leading-[1.15] ${
+            light ? "text-white" : "text-ink"
           }`}
         >
           {title}
@@ -50,9 +44,9 @@ export default function SectionHeading({
       )}
       {subtitle && (
         <p
-          className={`mt-5 text-base sm:text-lg lg:text-xl leading-relaxed ${
-            light ? "text-slate-200" : "text-slate-600"
-          }`}
+          className={`mt-4 text-base sm:text-lg leading-relaxed ${
+            light ? "text-white/70" : "text-slate-600"
+          } ${center ? "mx-auto max-w-2xl" : "max-w-xl"}`}
         >
           {subtitle}
         </p>
@@ -60,5 +54,3 @@ export default function SectionHeading({
     </Reveal>
   );
 }
-
-

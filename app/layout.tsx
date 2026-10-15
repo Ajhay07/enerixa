@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Sora } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -12,10 +12,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const sora = Sora({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-sora",
+  weight: ["500", "600", "700"],
+  variable: "--font-heading",
   display: "swap",
 });
 
@@ -46,8 +46,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable} ${sora.variable}`}>
-      <body className="overflow-x-hidden antialiased bg-white text-slate-800 font-sans">
+    <html lang="en" className={`scroll-smooth ${inter.variable} ${spaceGrotesk.variable}`}>
+      <body className="overflow-x-hidden antialiased bg-white text-ink font-sans">
         <Navbar />
         <main>{children}</main>
         <Footer />

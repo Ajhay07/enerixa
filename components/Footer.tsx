@@ -11,11 +11,8 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-4">
             <Logo />
-            <p className="text-xs font-semibold text-slate-700 tracking-wide pt-2">
-              Smart Energy | Smart Automation | Smart Security
-            </p>
-            <p className="text-xs text-slate-500">
-              One Partner. Complete Solutions.
+            <p className="text-xs font-medium text-slate-600 tracking-wide pt-2">
+              Smart Energy &middot; Smart Automation &middot; Smart Security
             </p>
             <p className="text-xs text-slate-500 max-w-sm leading-relaxed">
               Complete rooftop solar plants, cutting-edge smart home automation,
@@ -26,7 +23,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-sm font-bold text-slate-900">Quick Links</h4>
+            <h4 className="font-heading text-sm font-semibold text-ink">Quick Links</h4>
             <ul className="space-y-2 text-xs text-slate-600">
               <li>
                 <Link href="/" className="hover:text-[#003B73]">
@@ -63,7 +60,7 @@ export default function Footer() {
 
           {/* Our Solutions */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold text-slate-900">Our Solutions</h4>
+            <h4 className="font-heading text-sm font-semibold text-ink">Our Solutions</h4>
             <ul className="space-y-2 text-xs text-slate-600">
               <li>
                 <Link href="/services#solar" className="hover:text-[#003B73]">
@@ -85,7 +82,7 @@ export default function Footer() {
 
           {/* Get in Touch */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold text-slate-900">Get in Touch</h4>
+            <h4 className="font-heading text-sm font-semibold text-ink">Get in Touch</h4>
             <ul className="space-y-2.5 text-xs text-slate-600">
               <li>
                 <a href={COMPANY.phoneHref} className="flex items-center gap-2 hover:text-[#003B73]">
@@ -106,18 +103,18 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-            <div className="flex items-center gap-2 pt-2">
-              <a href="#" aria-label="Facebook" className="p-2 rounded-full bg-[#003B73] text-white hover:bg-[#5FAF35]">
-                <Facebook size={13} />
+            <div className="flex items-center gap-4 pt-2">
+              <a href="#" aria-label="Facebook" className="text-slate-400 hover:text-[#003B73]">
+                <Facebook size={16} />
               </a>
-              <a href="#" aria-label="LinkedIn" className="p-2 rounded-full bg-[#003B73] text-white hover:bg-[#5FAF35]">
-                <Linkedin size={13} />
+              <a href="#" aria-label="LinkedIn" className="text-slate-400 hover:text-[#003B73]">
+                <Linkedin size={16} />
               </a>
-              <a href="#" aria-label="Instagram" className="p-2 rounded-full bg-[#003B73] text-white hover:bg-[#5FAF35]">
-                <Instagram size={13} />
+              <a href="#" aria-label="Instagram" className="text-slate-400 hover:text-[#003B73]">
+                <Instagram size={16} />
               </a>
-              <a href="#" aria-label="YouTube" className="p-2 rounded-full bg-[#003B73] text-white hover:bg-[#5FAF35]">
-                <Youtube size={13} />
+              <a href="#" aria-label="YouTube" className="text-slate-400 hover:text-[#003B73]">
+                <Youtube size={16} />
               </a>
             </div>
           </div>

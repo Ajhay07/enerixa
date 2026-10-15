@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 type BtnProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   variant?: "primary" | "outline" | "white" | "secondary";
@@ -13,23 +13,24 @@ export default function Button({
   ...props
 }: BtnProps) {
   const base =
-    "inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 text-base font-bold tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#4CAF50]/30 active:scale-[0.98] shadow-md hover:shadow-xl group";
+    "inline-flex items-center justify-center gap-2.5 px-7 py-3.5 text-sm font-medium tracking-wide transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#5FAF35] group";
 
-  let styles = "bg-[#4CAF50] text-white hover:bg-[#43A047]";
+  let styles = "bg-[#003B73] text-white hover:bg-[#062A52]";
   if (variant === "outline") {
-    styles = "border-2 border-slate-300 bg-white/90 text-slate-800 hover:bg-white hover:border-[#003B73] hover:text-[#003B73]";
+    styles = "border border-slate-300 text-ink hover:border-[#003B73] hover:text-[#003B73]";
   } else if (variant === "white") {
-    styles = "bg-white text-[#003B73] hover:bg-slate-50 shadow-xl hover:shadow-2xl";
+    styles = "bg-white text-[#003B73] hover:bg-slate-100";
   } else if (variant === "secondary") {
-    styles = "bg-[#003B73] text-white hover:bg-[#062A52]";
+    styles = "bg-[#5FAF35] text-white hover:bg-[#4f9a2c]";
   }
 
   return (
     <a className={`${base} ${styles} ${className}`} {...props}>
       <span>{children}</span>
-      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black/15 transition-transform duration-300 group-hover:translate-x-1">
-        <ArrowRight size={14} className="stroke-[2.5]" />
-      </span>
+      <ArrowUpRight
+        size={16}
+        className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+      />
     </a>
   );
 }

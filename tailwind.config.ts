@@ -33,6 +33,8 @@ const config: Config = {
           subtle: "#E8F5E9",
         },
         mist: "#F4F7FA",
+        paper: "#F6F4EF",
+        ink: "#10202E",
         steel: "#5B6B7F",
         slate: {
           muted: "#64748B",
@@ -47,7 +49,7 @@ const config: Config = {
           "sans-serif",
         ],
         heading: [
-          "var(--font-sora)",
+          "var(--font-heading)",
           "var(--font-inter)",
           "system-ui",
           "sans-serif",
