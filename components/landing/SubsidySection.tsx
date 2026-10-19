@@ -77,7 +77,7 @@ export function SubsidySection() {
               delay={idx * 0.08}
               className="rounded-2xl border border-slate-200 bg-[#F6F8FA] p-6 sm:p-8"
             >
-              <h3 className="font-heading text-xl font-semibold text-ink">
+              <h3 className="font-heading text-2xl text-ink">
                 {scheme.title}
               </h3>
               <p className="mt-1 text-sm font-medium text-slate-500">
@@ -104,7 +104,7 @@ export function SubsidySection() {
         >
           <p className="text-base sm:text-lg font-medium text-ink">
             Combine both schemes for up to{" "}
-            <span className="font-heading font-bold text-[#003B73]">₹1,00,000</span>{" "}
+            <span className="font-heading font-bold text-[#5FAF35]">₹1,00,000</span>{" "}
             in total assistance on eligible residential rooftop systems.
           </p>
         </Reveal>
@@ -112,7 +112,7 @@ export function SubsidySection() {
         {/* Comparison table */}
         <div className="mt-14 lg:mt-16">
           <Reveal>
-            <h3 className="font-heading text-xl sm:text-2xl font-bold text-ink mb-6">
+            <h3 className="font-heading text-2xl sm:text-3xl text-ink mb-6">
               {COMPARISON.title}
             </h3>
           </Reveal>
@@ -160,7 +160,7 @@ export function SubsidySection() {
                       <td className="px-5 py-4 text-center text-[15px] text-slate-600 sm:px-6">
                         {row.state}
                       </td>
-                      <td className="px-5 py-4 text-center text-[15px] font-bold text-[#003B73] sm:px-6">
+                      <td className="px-5 py-4 text-center text-[15px] font-bold text-[#5FAF35] sm:px-6">
                         {row.total}
                       </td>
                     </tr>

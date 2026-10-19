@@ -30,7 +30,7 @@ export default function SectionHeading({
       )}
       {title && (
         <h2
-          className={`font-heading text-[32px] sm:text-[38px] lg:text-[42px] font-bold leading-[1.2] ${
+          className={`font-heading text-[34px] sm:text-[42px] lg:text-[48px] leading-[1.15] ${
             light ? "text-white" : "text-ink"
           }`}
         >

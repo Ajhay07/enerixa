@@ -79,7 +79,7 @@ export function SolutionsSection() {
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#E8F5E9] text-[#5FAF35]">
                     <item.icon size={20} />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold text-ink">{item.title}</h3>
+                  <h3 className="font-heading text-2xl text-ink">{item.title}</h3>
                 </div>
 
                 <p className="text-[15px] leading-relaxed text-slate-600">{item.desc}</p>

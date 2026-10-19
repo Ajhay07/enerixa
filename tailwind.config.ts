@@ -49,10 +49,9 @@ const config: Config = {
           "sans-serif",
         ],
         heading: [
+          "var(--font-display)",
           "var(--font-sans)",
           "system-ui",
-          "-apple-system",
-          "Segoe UI",
           "sans-serif",
         ],
       },

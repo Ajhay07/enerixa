@@ -22,7 +22,7 @@ export function BenefitsSection() {
               <div className="text-sm font-medium uppercase tracking-wide text-[#5FAF35] mb-3">
                 Benefits You Get
               </div>
-              <h3 className="font-heading text-[30px] sm:text-[34px] font-bold leading-[1.2] text-ink">
+              <h3 className="font-heading text-[34px] sm:text-[42px] leading-[1.1] text-ink">
                 Invest in Clean Energy, Reap Decades of Savings
               </h3>
             </Reveal>
@@ -72,7 +72,7 @@ export function CtaSection() {
         <Reveal className="rounded-2xl bg-[#003B73] px-8 py-12 sm:px-12 sm:py-14 lg:px-16 lg:py-16 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8">
-              <h2 className="font-heading text-[28px] sm:text-[34px] lg:text-[38px] font-bold leading-[1.2] text-white">
+              <h2 className="font-heading text-[32px] sm:text-[40px] lg:text-[46px] leading-[1.1] text-white">
                 Let&apos;s Build a Smarter,{" "}
                 <span className="text-[#5FAF35]">Greener</span> Tomorrow
               </h2>

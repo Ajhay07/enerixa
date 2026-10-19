@@ -53,7 +53,7 @@ export function AboutSection() {
               <div className="text-sm font-medium uppercase tracking-wide text-[#5FAF35] mb-3">
                 About Enerixa
               </div>
-              <h2 className="font-heading text-[32px] sm:text-[38px] font-bold leading-[1.2] text-ink">
+              <h2 className="font-heading text-[36px] sm:text-[44px] leading-[1.1] text-ink">
                 Smart Energy. Smart Automation. Smart Security.
               </h2>
             </Reveal>
