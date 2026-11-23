@@ -23,9 +23,9 @@ export default function Hero() {
           </div>
 
           <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-            <h1 className="mb-0 fs-16 text-white lh-1">Survey to</h1>
+            <h1 className="mb-0 fs-16 text-white lh-1">From Sunlight</h1>
             <div className="d-flex flex-wrap align-items-end gap-3">
-              <h1 className="mb-0 fs-16 text-white lh-1">Switch-On</h1>
+              <h1 className="mb-0 fs-16 text-white lh-1">to Savings</h1>
               <Link href="/epc#proposal" className="p-1 ps-7 bg-primary rounded-pill mb-2" aria-label="Request a proposal">
                 <span className="bg-white round-52 rounded-circle d-flex align-items-center justify-content-center">
                   <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
