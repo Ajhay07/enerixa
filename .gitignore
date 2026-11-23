@@ -39,3 +39,10 @@ Thumbs.db
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
+
+.vercel
+.env*
+
+# Local tooling / browser profile
+.chrome-cdp/
+.claude/

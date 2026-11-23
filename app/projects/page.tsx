@@ -1,60 +1,61 @@
-"use client";
+import type { Metadata } from "next";
+import Link from "next/link";
+import PageBanner from "@/components/PageBanner";
+import SectionHead from "@/components/SectionHead";
+import GetInTouch from "@/components/home/GetInTouch";
+import { PORTFOLIO } from "@/lib/data";
 
-import { Reveal, ImageReveal } from "@/components/Reveal";
-import SectionHeading from "@/components/SectionHeading";
-import { PROJECTS } from "@/lib/data";
-import { useState } from "react";
+export const metadata: Metadata = { title: "Projects" };
 
 export default function ProjectsPage() {
-  const [active, setActive] = useState("All");
-    const categories = ["All", ...Array.from(new Set(PROJECTS.map((p) => p.category)))];
-  const filtered =
-    active === "All"
-      ? PROJECTS
-      : PROJECTS.filter((p) => p.category === active);
-
   return (
-    <section className="py-16">
-      <div className="container-x">
-        <SectionHeading
-          eyebrow="Our Work"
-          title="Projects We're Proud Of"
-          subtitle="Solar plants, smart homes and secured facilities across India."
-        />
-        <div className="mb-8 flex flex-wrap items-center gap-3" role="group">
-          {categories.map((c) => (
-            <button
-              key={c}
-              type="button"
-              onClick={() => setActive(c)}
-              className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-all ${
-                active === c
-                  ? "border-green-brand bg-green-brand text-white"
-                  : "border-navy/20 text-steel hover:border-green-brand hover:text-navy"
-              }`}
-            >
-              {c}
-            </button>
-          ))}
+    <>
+      <PageBanner
+        num="01"
+        label="Projects"
+        title="What we build."
+        subtitle="Rooftop solar, automation and security across homes, businesses and industry."
+        image="/studiova/assets/images/portfolio/portfolio-img-5.jpg"
+      />
+
+      <section className="py-5 py-lg-11 py-xl-12 bg-light-gray">
+        <div className="container">
+          <div className="d-flex flex-column gap-5 gap-xl-11">
+            <SectionHead
+              num="02"
+              label="Portfolio"
+              title="Representative projects"
+              subtitle="The kinds of projects Enerixa delivers, with indicative scope. Case studies from completed sites will be published here."
+            />
+            <div className="row g-5">
+              {PORTFOLIO.map((p, i) => (
+                <div className="col-md-6 col-xl-4" key={p.title}>
+                  <div className="portfolio d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay={String(100 + (i % 3) * 100)} data-aos-duration="1000">
+                    <div className="portfolio-img position-relative overflow-hidden">
+                      <img src={p.image} alt={p.title} className="img-fluid w-100" />
+                      <div className="portfolio-overlay">
+                        <Link href="/contact" className="position-absolute top-50 start-50 translate-middle bg-primary round-64 rounded-circle hstack justify-content-center" aria-label={p.title}>
+                          <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="portfolio-details d-flex flex-column gap-3">
+                      <h3 className="mb-0">{p.title}</h3>
+                      <div className="hstack gap-2 flex-wrap">
+                        {p.cats.map((c) => (
+                          <span className="badge text-dark border" key={c}>{c}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((p) => (
-            <Reveal key={p.title} className="group rounded-xl border border-navy/10 bg-white shadow-sm overflow-hidden">
-              <div className="relative h-52 w-full overflow-hidden">
-                <ImageReveal src={p.image} alt={p.title} className="h-52 w-full" />
-                <span className="absolute left-3 top-3 rounded-full bg-navy/70 px-2.5 py-0.5 text-[10px] font-semibold text-white">
-                  {p.category}
-                </span>
-              </div>
-              <div className="p-5">
-                <h3 className="text-lg font-semibold text-navy">{p.title}</h3>
-                <p className="mt-1 text-sm text-steel">{p.location}</p>
-                <p className="mt-2 text-sm text-steel">{p.detail}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+
+      <GetInTouch num="03" />
+    </>
   );
 }

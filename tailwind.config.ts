@@ -9,36 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          green: "#4CAF50",
-          "green-hover": "#43A047",
-          "green-dark": "#388E3C",
-          "green-light": "#E8F5E9",
-          navy: "#003B73",
-          "navy-dark": "#062A52",
-          "navy-deep": "#041B35",
+        brand: {
+          green: "#8AB62F",
+          "green-dark": "#6F9A1F",
+          mint: "#EAF3D3",
+          blue: "#0B52B0",
+          navy: "#0A1F44",
+          mist: "#F2F6FB",
         },
-        navy: {
-          DEFAULT: "#003B73",
-          deep: "#041B35",
-          brand: "#003B73",
-          dark: "#062A52",
-          light: "#0D529C",
-        },
-        green: {
-          brand: "#4CAF50",
-          dark: "#388E3C",
-          light: "#5FAF35",
-          accent: "#43A047",
-          subtle: "#E8F5E9",
-        },
-        mist: "#F6F8FA",
-        paper: "#F6F8FA",
-        ink: "#17212B",
+        ink: "#0E1B2E",
         steel: "#5B6B7F",
-        slate: {
-          muted: "#64748B",
-        },
+        // legacy aliases kept so older class names resolve to the new theme
+        navy: { DEFAULT: "#0B52B0", deep: "#0A1F44", dark: "#0A1F44", light: "#0B52B0", brand: "#0B52B0" },
+        green: { brand: "#8AB62F", dark: "#6F9A1F", light: "#A4CC4A", accent: "#8AB62F", subtle: "#EAF3D3" },
+        mist: "#F2F6FB",
+        paper: "#F2F6FB",
       },
       fontFamily: {
         sans: [
@@ -49,13 +34,16 @@ const config: Config = {
           "sans-serif",
         ],
         heading: [
-          "var(--font-display)",
           "var(--font-sans)",
           "system-ui",
           "sans-serif",
         ],
       },
 
+      keyframes: {
+        marquee: { "0%": { transform: "translateX(0)" }, "100%": { transform: "translateX(-50%)" } },
+      },
+      animation: { marquee: "marquee 30s linear infinite" },
       letterSpacing: {
         tightest: "-0.03em",
       },
