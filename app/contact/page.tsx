@@ -12,7 +12,7 @@ export default function ContactPage() {
         label="Contact"
         title="Let's talk about your project."
         subtitle="Reach out for a free consultation, a detailed proposal and reliable post-installation support."
-        image="/studiova/assets/images/services/services-img-3.jpg"
+        image="/studiova/assets/images/resources/resources-1.jpg"
       />
       <GetInTouch num="02" />
     </>
