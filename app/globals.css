@@ -50,6 +50,41 @@
   display: none;
 }
 
+/* Horizontal nav links (desktop) */
+.nav-h-link {
+  position: relative;
+  padding-bottom: 4px;
+}
+.nav-h-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 2px;
+  background: var(--bs-primary);
+  transition: right 0.25s ease;
+}
+.nav-h-link:hover::after,
+.nav-h-link.active::after {
+  right: 0;
+}
+.header.fixed-header .nav-h-link::after {
+  background: var(--bs-dark);
+}
+
+/* Mobile nav dropdown panel */
+.mobile-nav-panel {
+  max-height: 0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  transition: max-height 0.3s ease;
+}
+.mobile-nav-panel.open {
+  max-height: 520px;
+}
+
 /* Carousel prev/next buttons */
 .owl-nav-btn {
   width: 52px;
