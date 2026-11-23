@@ -50,6 +50,20 @@
   display: none;
 }
 
+/* Carousel prev/next buttons */
+.owl-nav-btn {
+  width: 52px;
+  height: 52px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.owl-nav-btn:hover,
+.owl-nav-btn:focus-visible {
+  transform: scale(1.08);
+}
+.owl-nav-btn:active {
+  transform: scale(0.96);
+}
+
 /* Calculator result panel */
 .calc-result {
   background-color: var(--bs-dark);

@@ -72,6 +72,16 @@ export default function SiteScripts() {
         });
       });
 
+      // Custom prev/next buttons for any .owl-carousel: delegated + namespaced
+      // so re-running this effect on route change never double-binds.
+      $(document)
+        .off("click.owlNav")
+        .on("click.owlNav", ".owl-nav-prev, .owl-nav-next", function (this: any) {
+          const $btn = $(this);
+          const $carousel = $btn.closest(".featured-projects-slider").find(".owl-carousel");
+          $carousel.trigger($btn.hasClass("owl-nav-prev") ? "prev.owl.carousel" : "next.owl.carousel");
+        });
+
       // Stat count-up
       $(".count").each(function (this: any) {
         const $t = $(this);

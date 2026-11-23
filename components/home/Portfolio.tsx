@@ -46,6 +46,23 @@ export default function Portfolio({ num = "02" }: { num?: string }) {
               </div>
             ))}
           </div>
+
+          <div className="hstack gap-3 justify-content-center mt-7">
+            <button
+              type="button"
+              className="owl-nav-btn owl-nav-prev round-52 rounded-circle bg-dark text-white border-0 hstack justify-content-center"
+              aria-label="Previous project"
+            >
+              <iconify-icon icon="lucide:arrow-left" class="fs-7"></iconify-icon>
+            </button>
+            <button
+              type="button"
+              className="owl-nav-btn owl-nav-next round-52 rounded-circle bg-primary text-dark border-0 hstack justify-content-center"
+              aria-label="Next project"
+            >
+              <iconify-icon icon="lucide:arrow-right" class="fs-7"></iconify-icon>
+            </button>
+          </div>
         </div>
       </div>
     </section>
